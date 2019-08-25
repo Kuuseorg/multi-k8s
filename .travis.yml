@@ -17,10 +17,10 @@ before_install:
   - gcloud config set compute/zone europe-north1-a
   - gcloud container clusters get-credentials multi-cluster
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t kuuseorg/multi-client -f ./client/Dockerfile.dev ./client
+  # - docker build -t kuuseorg/multi-client -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run kuuseorg/multi-client npm run test -- --coverage
+  # - docker run kuuseorg/multi-client npm run test -- --coverage
 
 deploy:
   provider: script

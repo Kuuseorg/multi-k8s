@@ -6,7 +6,7 @@ docker push kuuseorg/multi-client:$SHA
 docker push kuuseorg/multi-server:$SHA
 docker push kuuseorg/multi-worker:$SHA
 
-docker push kuuseorg/multi-client:latest
+# docker push kuuseorg/multi-client:latest
 docker push kuuseorg/multi-server:latest
 docker push kuuseorg/multi-worker:latest
 
