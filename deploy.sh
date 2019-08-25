@@ -1,6 +1,6 @@
-docker build -t kuuseorg/multi-client:latest -t kuuseorg/multi-client:$SHA -f ./client/Dockerfile ./client
-docker build -t kuuseorg/multi-server:latest -t kuuseorg/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t kuuseorg/multi-worker:latest -t kuuseorg/multi-worker:$SHA -f ./worker/Dockerfile ./worker
+docker build -t kuuseorg/multi-client:$SHA -t kuuseorg/multi-client:latest -f ./client/Dockerfile ./client
+docker build -t kuuseorg/multi-server:$SHA -t kuuseorg/multi-server:latest -f ./server/Dockerfile ./server
+docker build -t kuuseorg/multi-worker:$SHA -t kuuseorg/multi-worker:latest -f ./worker/Dockerfile ./worker
 
 docker push kuuseorg/multi-client:$SHA
 docker push kuuseorg/multi-server:$SHA
