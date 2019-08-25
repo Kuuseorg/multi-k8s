@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: api-deployment
+  name: server-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      component: api
+      component: server
   template:
     metadata:
       labels:
-        component: api
+        component: server
     spec:
       containers:
-        - name: api
+        - name: server
           image: stephengrider/multi-server
           ports:
             - containerPort: 5000
